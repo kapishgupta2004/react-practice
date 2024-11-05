@@ -5,14 +5,14 @@ function Card({kapish}){
         <img
     src="./photo.jpg"
 alt="Card image"
-         className="h-2"
+         className="h-4 w-4"
         />
       </div>
       <div>
         <div>Card Title {" "} { kapish}</div>
       </div>
       <div>
-        <div className="bg-black text-white">
+        <div >
           This is a basic card component with an image and some description. It's built using Tailwind CSS and Next.js, providing a clean and modern look that's fully responsive.
         </div>
       </div>
