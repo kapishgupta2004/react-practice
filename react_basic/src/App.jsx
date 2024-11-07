@@ -8,9 +8,9 @@ import Background from "./components/background"
 function App(){
   
   return(
-  // <PasswordGen/>
+  <PasswordGen/>
   // <Background />
-  <Card/>
+  // <Card/>
 )
 }
 

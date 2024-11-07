@@ -1,0 +1,15 @@
+$col: red;
+
+.styledDiv {
+  background-color: gray;
+  color: blue;
+
+  .child {
+    color: $col;
+  }
+
+  .col {
+    color: $col;
+  }
+
+}

@@ -60,11 +60,11 @@ function PasswordGen() {
     <div className='flex text-sm gap-x-2'>
       <div className='flex items-center gap-x-1'>
         <input 
-        type="range"
-        min={6}
-        max={100}
-        value={length}
-         className='cursor-pointer'
+        type="text"
+        // min={6}
+        // max={100}
+        // value={length}
+        //  className='cursor-pointer'
          onChange={(e) => {setLength(e.target.value)}}
           />
           <label>Length: {length}</label>
