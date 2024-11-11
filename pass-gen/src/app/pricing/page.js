@@ -35,8 +35,9 @@ export default function Page() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#cfddfa",
+        backgroundColor: "black",
         height: "100%",
+        color: "white",
       }}
     >
       <StyledTypography>Our Pricing</StyledTypography>
