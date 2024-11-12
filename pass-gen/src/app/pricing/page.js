@@ -2,9 +2,8 @@
 
 import { Grid2, Switch } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { StyledDiv, StyledTypography } from "./style";
+import { StyledDiv } from "./style";
 import Card from "../components/card";
-import { lightBlue } from "@mui/material/colors";
 
 const cardData = [
   {
@@ -40,7 +39,7 @@ export default function Page() {
         color: "white",
       }}
     >
-      <StyledTypography>Our Pricing</StyledTypography>
+      <Typography>Our Pricing</Typography>
       <StyledDiv>
         <Typography>Monthly</Typography>
         <Switch />

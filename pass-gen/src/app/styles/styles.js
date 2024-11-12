@@ -1,12 +1,7 @@
 "use client";
 
-import { Button, getAppBarUtilityClass, Typography } from "@mui/material";
-import { height, styled } from "@mui/system";
-
-export const Aaaaa = styled(Button)(() => ({
-  background: "black",
-  color: "white",
-}));
+import { Button, Typography } from "@mui/material";
+import { styled } from "@mui/system";
 
 export const StyledCard = styled("div")(() => ({
   border: "1px lightgray solid",
@@ -30,6 +25,14 @@ export const StyledTypography = styled(Typography)(() => ({
   background: "green",
   ":hover": {
     fontSize: 300,
+    background: "red",
+  },
+}));
+
+export const StyledButton = styled(Button)(() => ({
+  background: "blue",
+  color: "white",
+  ":hover": {
     background: "red",
   },
 }));

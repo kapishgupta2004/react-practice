@@ -4,7 +4,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
-import { StyledCard } from "../styles/styles";
+import { StyledButton, StyledCard } from "../styles/styles";
 
 export default function Card({ item }) {
   console.log(item.feature);
@@ -35,6 +35,7 @@ export default function Card({ item }) {
             </>
           ))}
         </List>
+        <StyledButton variant="outlined">Outlined</StyledButton>
       </StyledCard>
     </>
   );
