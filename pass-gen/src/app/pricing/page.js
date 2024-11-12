@@ -11,18 +11,21 @@ const cardData = [
     title: "Basic",
     price: 19.99,
     feature: ["500gb storage", "2 user allowed", "send Upto 2gb"],
+    link: "/new1",
   },
   {
     id: 2,
     title: "Professional",
     price: 24.99,
     feature: ["1tb storage", "5user allowed", "send Upto 10gb"],
+    link: "/new2",
   },
   {
     id: 3,
     title: "Advance",
     price: 39.99,
     feature: ["2tb", "10 user allowed", "send Upto 2gb"],
+    link: "/new3",
   },
 ];
 

@@ -5,6 +5,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import { StyledButton, StyledCard } from "../styles/styles";
+import Link from "next/link";
 
 export default function Card({ item }) {
   console.log(item.feature);
@@ -35,7 +36,9 @@ export default function Card({ item }) {
             </>
           ))}
         </List>
-        <StyledButton variant="outlined">Outlined</StyledButton>
+        <a href={item.link} target="_blank">
+          <StyledButton variant="outlined">Outlined</StyledButton>
+        </a>
       </StyledCard>
     </>
   );
