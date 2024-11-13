@@ -4,6 +4,7 @@ import { Grid2, Switch } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { StyledDiv } from "./style";
 import Card from "../components/card";
+import { useState } from 'react';
 
 const cardData = [
   {
@@ -29,6 +30,26 @@ const cardData = [
   },
 ];
 
+
+
+// Custom hook for dropdown visibility
+export const useDropdown = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(prevState => !prevState);
+  };
+
+
+  console.log("isDropdownOpen: ", isDropdownOpen)
+
+  return {
+    isDropdownOpen,
+    toggleDropdown,
+  };
+};
+
+
 export default function Page() {
   return (
     <div
@@ -50,8 +71,10 @@ export default function Page() {
       </StyledDiv>
       <div
         style={{
+          height: 400,
           display: "flex",
-          gap: 5,
+          alignItems: "center",
+          gap: 10,
         }}
       >
         {cardData.map((item) => (
