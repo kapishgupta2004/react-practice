@@ -8,7 +8,7 @@ export const StyledCard = styled("div")(() => ({
   width: 240,
   height: 340,
   textAlign: "center",
-  boxShadow: "1px 1px 1px 1px",
+  boxShadow: "1px 1px 1px 1px gray",
   borderRadius: "2%",
   background: "#ebeffa",
   color: "black",

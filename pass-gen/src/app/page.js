@@ -9,8 +9,6 @@ import { Card, Typography } from "@mui/material";
 export default function Home() {
   return (
     <div>
-   
-
       <div className={styles.styledDiv}>
         hello
         <div className={styles.child}>my sample next js</div>
@@ -26,7 +24,7 @@ export default function Home() {
         <Button variant="outlined">Outlined</Button>
       </Stack>
       <StyledCard>
-        <StyledTypography variant="h1">Heelo</StyledTypography>
+        {/* <StyledTypography variant="h1">Heelo</StyledTypography> */}
       </StyledCard>
     </div>
   );

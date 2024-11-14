@@ -14,23 +14,14 @@ export default function Card({ item }) {
         <p>{item.title}</p>
         <h1>${item.price}</h1>
 
-        <List
-          style={{
-            p: 0,
-            maxWidth: 500,
-            borderColor: "divider",
-            backgroundColor: "background.paper",
-            textAlign: "center",
-          }}
-          aria-label="mailbox folders"
-        >
-          {item.feature.map((item, index) => (
-            <>
-              <ListItem key={index}>
-                <ListItemText primary={item} />
+        <List aria-label="mailbox folders">
+          {item.feature.map((item) => (
+            <div key={item.id}>
+              <ListItem>
+                <ListItemText primary={item.name} />
               </ListItem>
               <Divider component="li" />
-            </>
+            </div>
           ))}
         </List>
         <a href={item.link} target="_blank">

@@ -29,40 +29,8 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable}`}
         style={{ margin: 0, padding: 0, height: "100vh", width: "100vw" }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 20,
-          }}
-        >
-         
-          <Navbar />
-          <Navbar />
-          <Navbar />
-          <Navbar />
-          <Navbar />
-        </div>
+        <Navbar />
 
-        {/* <div
-          style={{
-            display: "flex",
-            gap: 30,
-            color: "black",
-            background: "white",
-            justifyContent: "center",
-            fontSize: 25,
-          }}
-        >
-          <Button variant="text" onClick={useDropdown}>
-            home
-          </Button>
-          <Button variant="text">types</Button>
-          <Button variant="text">offers</Button>
-          <Button variant="text">about</Button>
-          <Button variant="text">cart</Button>
-          <Button variant="text">our services</Button>
-        </div> */}
         {children}
       </body>
     </html>

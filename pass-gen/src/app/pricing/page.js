@@ -1,86 +1,133 @@
 "use client";
 
-import { Grid2, Switch } from "@mui/material";
+import { Switch } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { StyledDiv } from "./style";
+import { StyledCardDiv, StyledDiv, StyledPage } from "./style";
 import Card from "../components/card";
-import { useState } from 'react';
+import { useState } from "react";
+
+// const cardData = [
+//   {
+//     id: 1,
+//     title: "Basic",
+//     price: 19.99,
+
+//     feature: [
+//       { id: 1, name: "500gb storage" },
+//       { id: 2, name: "2 user allowed" },
+//       { id: 3, name: "send Upto 2gb" },
+//     ],
+//     link: "/new1",
+//   },
+//   {
+//     id: 2,
+//     title: "Professional",
+//     price: 24.99,
+//     feature: [
+//       { id: 1, name: "1tb storage" },
+//       { id: 2, name: "5user allowed" },
+//       { id: 3, name: "send Upto 10gb" },
+//     ],
+//     link: "/new2",
+//   },
+//   {
+//     id: 3,
+//     title: "Advance",
+//     price: 39.99,
+//     feature: [
+//       { id: 1, name: "2tb" },
+//       { id: 2, name: "10 user allowed" },
+//       { id: 3, name: "send Upto 2gb" },
+//     ],
+//     link: "/new3",
+//   },
+// ];
+// export default function Page() {
+//   return (
+//     <StyledPage>
+//       <Typography>Our Pricing</Typography>
+//       <StyledDiv>
+//         <Typography>Monthly</Typography>
+//         <Switch />
+//         <Typography>Anually</Typography>
+//       </StyledDiv>
+//       <StyledCardDiv>
+//         {cardData.map((item) => (
+//           <Card key={item.id} item={item} />
+//         ))}
+//       </StyledCardDiv>
+//     </StyledPage>
+//   );
+// }
+
+// _______________________________________________________________________________________________________
+
 
 const cardData = [
   {
     id: 1,
     title: "Basic",
-    price: 19.99,
-    feature: ["500gb storage", "2 user allowed", "send Upto 2gb"],
+    monthlyPrice: 19.99,
+    annualPrice: 199.99,
+    feature: [
+      { id: 1, name: "500gb storage" },
+      { id: 2, name: "2 user allowed" },
+      { id: 3, name: "send Upto 2gb" },
+    ],
     link: "/new1",
   },
   {
     id: 2,
     title: "Professional",
-    price: 24.99,
-    feature: ["1tb storage", "5user allowed", "send Upto 10gb"],
+    monthlyPrice: 24.99,
+    annualPrice: 249.99,
+    feature: [
+      { id: 1, name: "1tb storage" },
+      { id: 2, name: "5 user allowed" },
+      { id: 3, name: "send Upto 10gb" },
+    ],
     link: "/new2",
   },
   {
     id: 3,
     title: "Advance",
-    price: 39.99,
-    feature: ["2tb", "10 user allowed", "send Upto 2gb"],
+    monthlyPrice: 39.99,
+    annualPrice: 399.99,
+    feature: [
+      { id: 1, name: "2tb" },
+      { id: 2, name: "10 user allowed" },
+      { id: 3, name: "send Upto 2gb" },
+    ],
     link: "/new3",
   },
 ];
 
-
-
-// Custom hook for dropdown visibility
-export const useDropdown = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(prevState => !prevState);
-  };
-
-
-  console.log("isDropdownOpen: ", isDropdownOpen)
-
-  return {
-    isDropdownOpen,
-    toggleDropdown,
-  };
-};
-
-
 export default function Page() {
+  const [isAnnual, setIsAnnual] = useState(false);
+
+  const handleSwitchChange = () => {
+    setIsAnnual((prev) => !prev);
+  };
+
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "black",
-        height: "100%",
-        color: "white",
-      }}
-    >
+    <StyledPage>
       <Typography>Our Pricing</Typography>
       <StyledDiv>
         <Typography>Monthly</Typography>
-        <Switch />
-        <Typography>Anually</Typography>
+        <Switch checked={isAnnual} onChange={handleSwitchChange} />
+        <Typography>Annually</Typography>
       </StyledDiv>
-      <div
-        style={{
-          height: 400,
-          display: "flex",
-          alignItems: "center",
-          gap: 10,
-        }}
-      >
+      <StyledCardDiv>
         {cardData.map((item) => (
-          <Card key={item.id} item={item} />
+          <Card
+            key={item.id}
+            item={{
+              ...item,
+              price: isAnnual ? item.annualPrice : item.monthlyPrice,
+            }}
+          />
         ))}
-      </div>
-    </div>
+      </StyledCardDiv>
+    </StyledPage>
   );
 }
