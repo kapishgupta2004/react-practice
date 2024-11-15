@@ -5,6 +5,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import { StyledButton, StyledCard } from "../styles/styles";
+import { StyledList } from "../pricing/style";
 
 export default function Card({ item }) {
   console.log(item.feature);
@@ -14,7 +15,7 @@ export default function Card({ item }) {
         <p>{item.title}</p>
         <h1>${item.price}</h1>
 
-        <List aria-label="mailbox folders">
+        <StyledList aria-label="mailbox folders">
           {item.feature.map((item) => (
             <div key={item.id}>
               <ListItem>
@@ -23,7 +24,7 @@ export default function Card({ item }) {
               <Divider component="li" />
             </div>
           ))}
-        </List>
+        </StyledList>
         <a href={item.link} target="_blank">
           <StyledButton variant="outlined">Purchase</StyledButton>
         </a>

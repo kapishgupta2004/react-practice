@@ -41,6 +41,8 @@ export const StyledList = styled(List)(() => ({
   borderColor: "divider",
   backgroundColor: "background.paper",
   textAlign: "center",
+  justifyContent: "center",
+  alignItems: "center",
 }));
 
 export const StyledSwitch = styled((props) => (
