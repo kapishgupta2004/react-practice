@@ -60,7 +60,7 @@ export const StyledSwitch = styled((props) => (
       transform: "translateX(16px)",
       color: "#fff",
       "& + .MuiSwitch-track": {
-        backgroundColor: "#65C466",
+        backgroundColor: "blue",
         opacity: 1,
         border: 0,
       },
