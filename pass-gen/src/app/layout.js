@@ -1,7 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
 import Card from "./components/card";
-import { StyledButton } from "./styles/styles";
 import Button from "@mui/material/Button";
 import Navbar from "./components/navbar";
 // import { useDropdown, } from "./pricing/page";

@@ -21,14 +21,6 @@ export const StyledCard = styled("div")(() => ({
   },
 }));
 
-export const StyledTypography = styled(Typography)(() => ({
-  background: "green",
-  ":hover": {
-    fontSize: 300,
-    background: "red",
-  },
-}));
-
 export const StyledButton = styled(Button)(() => ({
   background: "blue",
   color: "white",

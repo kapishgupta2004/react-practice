@@ -1,8 +1,13 @@
 "use client";
 
-import { Switch } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { StyledCardDiv, StyledDiv, StyledPage } from "./style";
+import {
+  StyledCardDiv,
+  StyledDiv,
+  StyledPage,
+  StyledSwitch,
+  StyledButton,
+} from "./style";
 import Card from "../components/card";
 import { useState } from "react";
 
@@ -62,7 +67,6 @@ import { useState } from "react";
 
 // _______________________________________________________________________________________________________
 
-
 const cardData = [
   {
     id: 1,
@@ -114,7 +118,7 @@ export default function Page() {
       <Typography>Our Pricing</Typography>
       <StyledDiv>
         <Typography>Monthly</Typography>
-        <Switch checked={isAnnual} onChange={handleSwitchChange} />
+        <StyledSwitch checked={isAnnual} onChange={handleSwitchChange} />
         <Typography>Annually</Typography>
       </StyledDiv>
       <StyledCardDiv>
