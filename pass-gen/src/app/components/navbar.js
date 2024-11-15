@@ -20,7 +20,7 @@ const navdata = [
     subMenu: [
       {
         id: 1,
-        name: "about me",
+        name: "About Us",
       },
     ],
   },
