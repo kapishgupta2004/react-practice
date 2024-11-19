@@ -21,6 +21,7 @@ const navdata = [
       {
         id: 1,
         name: "About Us",
+        link: "/",
       },
     ],
   },
@@ -83,7 +84,7 @@ export default function Navbar() {
               >
                 {nav.subMenu.map((item) => (
                   <MenuItem key={item.id} onClick={handleClose}>
-                    {item.name}
+                    <Link href={item.link}> {item.name}</Link>
                   </MenuItem>
                 ))}
               </Menu>
